@@ -213,7 +213,7 @@ def export_pdf(pptx, soffice):
         profile = folder / 'profile'
         result = subprocess.run([
             soffice, '-env:UserInstallation=' + profile.as_uri(), '--headless',
-            '--convert-to', 'pdf', '--outdir', str(folder), str(pptx),
+            '--convert-to', 'pdf:impress_pdf_Export:{"UseLosslessCompression":{"type":"boolean","value":"true"},"ReduceImageResolution":{"type":"boolean","value":"false"}}', '--outdir', str(folder), str(pptx),
         ], capture_output=True, text=True, timeout=180)
         generated = folder / (pptx.stem + '.pdf')
         if result.returncode != 0 or not generated.is_file() or generated.stat().st_size == 0:
@@ -223,12 +223,28 @@ def export_pdf(pptx, soffice):
         return destination
 
 
+def export_pdf_powerpoint(pptx):
+    """Direct print-quality export; requires installed Microsoft PowerPoint."""
+    if os.name != 'nt':
+        raise RuntimeError('PowerPoint export is supported on Windows only')
+    destination = pptx.with_suffix('.pdf')
+    subprocess.run([
+        'powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass',
+        '-File', str(ROOT / 'tools/export_pdf_powerpoint.ps1'),
+        '-InputPptx', str(pptx), '-OutputPdf', str(destination),
+    ], check=True, timeout=180)
+    if not destination.is_file() or not destination.stat().st_size:
+        raise RuntimeError('PowerPoint did not create the PDF')
+    return destination
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT / 'poster.json')
     parser.add_argument('--out-dir', type=Path, default=ROOT / 'build')
     parser.add_argument('--name', default='qldpc_poster_v10')
     parser.add_argument('--pdf', action='store_true')
+    parser.add_argument('--pdf-engine', choices=['libreoffice', 'powerpoint'], default='libreoffice')
     parser.add_argument('--preview', action='store_true')
     parser.add_argument('--soffice', help='Optional path to LibreOffice executable')
     parser.add_argument('--pdftoppm', help='Optional path to Poppler pdftoppm executable')
@@ -239,12 +255,13 @@ def main():
     if args.preview_size <= 0:
         parser.error('--preview-size must be positive')
     # Resolve conversion tools before writing so a missing dependency is clear.
-    soffice = find_executable(args.soffice, 'soffice') if args.pdf or args.preview else None
+    wants_pdf = args.pdf or args.preview
+    soffice = find_executable(args.soffice, 'soffice') if wants_pdf and args.pdf_engine == 'libreoffice' else None
     pdftoppm = find_executable(args.pdftoppm, 'pdftoppm') if args.preview else None
     pptx = build_pptx(args.config.resolve(), args.out_dir.resolve(), args.name)
     print(pptx)
-    if soffice:
-        pdf = export_pdf(pptx, soffice)
+    if wants_pdf:
+        pdf = export_pdf_powerpoint(pptx) if args.pdf_engine == 'powerpoint' else export_pdf(pptx, soffice)
         print(pdf)
         if pdftoppm:
             prefix = pdf.parent / (pdf.stem + '_preview')

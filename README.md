@@ -99,6 +99,38 @@ Thư mục `build/` được bỏ qua trong `.gitignore`. Nếu repo cần lưu 
 copy riêng PDF sang thư mục tài liệu của repo rồi commit file đó.
 Gói này không tự commit hoặc push.
 
+## Bản chất lượng cao cho hội nghị
+
+Nguồn đã sửa kích thước/chuyển baseline của các chỉ số dưới và khoảng cách
+giữa nhãn với ký hiệu trong sơ đồ để PowerPoint xuất đúng. Tiêu đề vẫn giữ
+hai dòng, căn distributed. Các bảng, sơ đồ và hộp chữ vẫn là đối tượng native.
+
+Trên Windows đã cài PowerPoint và hai font DejaVu Sans đi kèm:
+
+```powershell
+python generate_poster.py --pdf --pdf-engine powerpoint --name qldpc_poster_final --out-dir build
+```
+
+PowerPoint xuất PDF trực tiếp ở print intent, giữ ảnh PNG lossless và không
+chuyển chữ thành bitmap khi thiếu font. Phải kiểm tra font sau khi xuất.
+LibreOffice vẫn được hỗ trợ; chế độ xuất đã tắt giảm độ phân giải và dùng
+nén lossless, nhưng phải kiểm tra ký hiệu và bố cục riêng với engine đó.
+
+Để đặt page box chính xác 75 × 120 cm (PowerPoint làm tròn rất nhỏ) và giữ
+đúng từng pixel/alpha của logo PNG gốc, cài `pypdf` và `Pillow`, rồi chạy:
+
+```powershell
+python tools/finalize_pdf.py build/qldpc_poster_final.pdf build/qldpc_poster_final_high_quality.pdf --restore-logo src/pptx/ppt/media/asiancomnet2026_logo.png
+pdftoppm -scale-to 3000 -singlefile -png build/qldpc_poster_final_high_quality.pdf build/qldpc_poster_final_high_quality_preview
+```
+
+Bước cuối chỉ sửa page box, metadata và stream logo lossless; không rasterize
+trang, không đổi chữ/đường nét, không phóng lớn ảnh. Biểu đồ 3568 × 2416 px ở
+kích thước 33 × 22,345 cm đạt khoảng 275 dpi. Logo 254 × 108 px ở kích thước
+7,5 × 3,189 cm chỉ đạt khoảng 86 dpi. Flyer chính thức cũng chứa bản xanh
+254 × 108 px; chưa tìm được bản xanh vector/độ phân giải cao hơn phù hợp.
+Không gọi toàn bộ PDF là “300 dpi”.
+
 ## Nguồn tài nguyên
 
 Scatter plot giữ từ poster nghiên cứu gốc; sơ đồ và bảng là đối tượng PowerPoint native.

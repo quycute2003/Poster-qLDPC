@@ -2,3 +2,8 @@
 __pycache__/
 *.pyc
 .venv/
+/tmp/
+/output/
+/qldpc_poster_simple_v10.pdf
+/qldpc_poster_simple_v10.pptx
+/qldpc_poster_simple_v10_preview.png
