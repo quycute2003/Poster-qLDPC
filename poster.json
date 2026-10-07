@@ -1,0 +1,888 @@
+{
+  "version": "v10",
+  "description": "Balanced two-line title with distributed alignment; official conference logo and validated section 5.",
+  "canvas": {
+    "width_cm": 75,
+    "height_cm": 120,
+    "design_width": 1500,
+    "design_height": 2400
+  },
+  "objects": {
+    "shape_102": {
+      "shape_id": "102",
+      "name": "",
+      "position": {
+        "x": 565.0,
+        "y": 1196.0,
+        "width": 0.5,
+        "height": 77.0
+      }
+    },
+    "shape_103": {
+      "shape_id": "103",
+      "name": "",
+      "position": {
+        "x": 215.0,
+        "y": 1196.0,
+        "width": 0.5,
+        "height": 77.0
+      }
+    },
+    "shape_104": {
+      "shape_id": "104",
+      "name": "",
+      "position": {
+        "x": 390.0,
+        "y": 1110.0,
+        "width": 175.0,
+        "height": 20.0
+      }
+    },
+    "shape_105": {
+      "shape_id": "105",
+      "name": "",
+      "position": {
+        "x": 215.0,
+        "y": 1110.0,
+        "width": 175.0,
+        "height": 20.0
+      }
+    },
+    "shape_3": {
+      "shape_id": "3",
+      "name": "TextBox 2",
+      "position": {
+        "x": 1000.0,
+        "y": 39.999944,
+        "width": 440.0,
+        "height": 32.0
+      },
+      "text": "Presentation ID 88",
+      "alignment": "right"
+    },
+    "title": {
+      "shape_id": "4",
+      "name": "TextBox 3",
+      "position": {
+        "x": 60.0,
+        "y": 98.999944,
+        "width": 1379.999944,
+        "height": 167.0
+      },
+      "text": "A Prospective Rank Test of a Detector-Error-Model\nWeight Screen for Circuit-Level qLDPC Decoding",
+      "alignment": "distributed"
+    },
+    "shape_5": {
+      "shape_id": "5",
+      "name": "TextBox 4",
+      "position": {
+        "x": 60.0,
+        "y": 283.0,
+        "width": 1379.999944,
+        "height": 38.0
+      },
+      "text": "Hung N. Dang and Quy X. Pham",
+      "alignment": "left"
+    },
+    "shape_6": {
+      "shape_id": "6",
+      "name": "TextBox 5",
+      "position": {
+        "x": 60.0,
+        "y": 328.0,
+        "width": 1379.999944,
+        "height": 26.0
+      },
+      "text": "Faculty of Information Technology · Posts and Telecommunications Institute of Technology (PTIT), Hanoi, Vietnam",
+      "alignment": "left"
+    },
+    "shape_7": {
+      "shape_id": "7",
+      "name": "Connector 6",
+      "position": {
+        "x": 60.0,
+        "y": 374.0,
+        "width": 1380.0,
+        "height": 0.0
+      }
+    },
+    "shape_8": {
+      "shape_id": "8",
+      "name": "TextBox 7",
+      "position": {
+        "x": 60.0,
+        "y": 400.0,
+        "width": 1379.999944,
+        "height": 42.0
+      },
+      "text": "1  Motivation and research question",
+      "alignment": "left"
+    },
+    "shape_9": {
+      "shape_id": "9",
+      "name": "TextBox 8",
+      "position": {
+        "x": 60.0,
+        "y": 448.0,
+        "width": 1379.999944,
+        "height": 57.0
+      },
+      "text": "Circuit-level Monte Carlo evaluation is costly across many candidate instances.\nWe test a DEM-based ranking screen before measuring new logical-block error rates (LERs).",
+      "alignment": "left"
+    },
+    "shape_10": {
+      "shape_id": "10",
+      "name": "Rounded Rectangle 9",
+      "position": {
+        "x": 60.0,
+        "y": 519.0,
+        "width": 1379.999944,
+        "height": 85.0
+      }
+    },
+    "shape_11": {
+      "shape_id": "11",
+      "name": "TextBox 10",
+      "position": {
+        "x": 80.0,
+        "y": 515.6,
+        "width": 1340.0,
+        "height": 85.0
+      },
+      "text": "Can DEM structure rank which complete code–circuit–decoder instances\nBP+OSD decodes more reliably, before new LER results are known?",
+      "alignment": "center"
+    },
+    "shape_13": {
+      "shape_id": "13",
+      "name": "TextBox 12",
+      "position": {
+        "x": 60.0,
+        "y": 630.0,
+        "width": 1380.0,
+        "height": 28.976333
+      },
+      "text": "Connection to classical LDPC decoding",
+      "alignment": "left"
+    },
+    "shape_14": {
+      "shape_id": "14",
+      "name": "TextBox 13",
+      "position": {
+        "x": 60.0,
+        "y": 667.0,
+        "width": 1380.0,
+        "height": 26.912167
+      },
+      "text": "DEM: Tanner graph for syndrome decoding.  Logical-block LER: analogue of FER / word-error rate.",
+      "alignment": "left"
+    },
+    "shape_15": {
+      "shape_id": "15",
+      "name": "TextBox 14",
+      "position": {
+        "x": 60.0,
+        "y": 703.0,
+        "width": 1380.0,
+        "height": 25.529556
+      },
+      "text": "Minimum detector-silent logical weight plays a distance-like role. The screen is a verified upper bound.",
+      "alignment": "left"
+    },
+    "shape_16": {
+      "shape_id": "16",
+      "name": "TextBox 15",
+      "position": {
+        "x": 60.0,
+        "y": 756.0,
+        "width": 660.0,
+        "height": 42.0
+      },
+      "text": "2  Building the DEM-weight screen",
+      "alignment": "left"
+    },
+    "shape_17": {
+      "shape_id": "17",
+      "name": "TextBox 16",
+      "position": {
+        "x": 780.0,
+        "y": 756.0,
+        "width": 660.0,
+        "height": 42.0
+      },
+      "text": "3  The prospective test",
+      "alignment": "left"
+    },
+    "shape_18": {
+      "shape_id": "18",
+      "name": "TextBox 17",
+      "position": {
+        "x": 60.0,
+        "y": 809.0,
+        "width": 660.0,
+        "height": 88.0
+      },
+      "text": "A detector error model (DEM) records which detectors\neach fault mechanism triggers and which logical\nobservables it flips.",
+      "alignment": "left"
+    },
+    "shape_19": {
+      "shape_id": "19",
+      "name": "TextBox 18",
+      "position": {
+        "x": 60.0,
+        "y": 900.0,
+        "width": 660.0,
+        "height": 82.810333
+      },
+      "text": "Screen d̂upper: smallest verified mechanism count\nfound for a pattern that triggers no detectors but\nflips a logical observable, if the stability gate passes.",
+      "alignment": "left"
+    },
+    "shape_20": {
+      "shape_id": "20",
+      "name": "TextBox 19",
+      "position": {
+        "x": 60.0,
+        "y": 995.0,
+        "width": 660.0,
+        "height": 25.529556
+      },
+      "text": "Verified upper bound, not code or exact DEM distance.",
+      "alignment": "left"
+    },
+    "shape_41": {
+      "shape_id": "41",
+      "name": "TextBox 40",
+      "position": {
+        "x": 780.0,
+        "y": 809.0,
+        "width": 660.0,
+        "height": 84.0
+      },
+      "text": "Freeze the bank, circuit, decoder, budget and decision\nrules before new LER labels. Four development\nanchors are excluded from the confirmatory score.",
+      "alignment": "left"
+    },
+    "shape_42": {
+      "shape_id": "42",
+      "name": "TextBox 41",
+      "position": {
+        "x": 780.0,
+        "y": 906.0,
+        "width": 660.0,
+        "height": 26.912167
+      },
+      "text": "Table I. Frozen experimental settings (summary)",
+      "alignment": "left"
+    },
+    "shape_126": {
+      "shape_id": "126",
+      "name": "Table 42",
+      "position": {
+        "x": 780.0,
+        "y": 947.0,
+        "width": 660.0,
+        "height": 380.999778
+      }
+    },
+    "shape_45": {
+      "shape_id": "45",
+      "name": "TextBox 44",
+      "position": {
+        "x": 60.0,
+        "y": 1400.0,
+        "width": 1379.999944,
+        "height": 42.0
+      },
+      "text": "4  Ranking agreement and evidence",
+      "alignment": "left"
+    },
+    "shape_46": {
+      "shape_id": "46",
+      "name": "TextBox 45",
+      "position": {
+        "x": 60.0,
+        "y": 1451.0,
+        "width": 1379.999944,
+        "height": 53.999944
+      },
+      "text": "Logical-block LER is the fraction of sampled blocks with any logical observable decoded incorrectly.\nPairs are ordered only when their Wilson 95% LER intervals do not overlap.",
+      "alignment": "left"
+    },
+    "shape_47": {
+      "shape_id": "47",
+      "name": "TextBox 46",
+      "position": {
+        "x": 60.0,
+        "y": 1508.0,
+        "width": 660.0,
+        "height": 26.220833
+      },
+      "text": "Rank hypothesis: higher screen predicts lower LER.",
+      "alignment": "left"
+    },
+    "shape_130": {
+      "shape_id": "130",
+      "name": "Picture 47",
+      "position": {
+        "x": 60.0,
+        "y": 1535.0,
+        "width": 660.0,
+        "height": 446.905833
+      }
+    },
+    "shape_49": {
+      "shape_id": "49",
+      "name": "TextBox 48",
+      "position": {
+        "x": 350.0,
+        "y": 1614.0,
+        "width": 335.0,
+        "height": 52.441667
+      },
+      "text": "Same screen value,\ndifferent LER.",
+      "alignment": "left"
+    },
+    "shape_50": {
+      "shape_id": "50",
+      "name": "TextBox 49",
+      "position": {
+        "x": 60.0,
+        "y": 1991.0,
+        "width": 660.0,
+        "height": 45.548111
+      },
+      "text": "Fig. 2. Wilson 95% bars. Horizontal jitter separates\nequal integer screen values.",
+      "alignment": "left"
+    },
+    "shape_51": {
+      "shape_id": "51",
+      "name": "TextBox 50",
+      "position": {
+        "x": 780.0,
+        "y": 1508.0,
+        "width": 660.0,
+        "height": 26.912167
+      },
+      "text": "Table II. Confirmatory pair results (summary)",
+      "alignment": "left"
+    },
+    "shape_134": {
+      "shape_id": "134",
+      "name": "Table 51",
+      "position": {
+        "x": 780.0,
+        "y": 1549.0,
+        "width": 660.0,
+        "height": 290.0
+      }
+    },
+    "shape_53": {
+      "shape_id": "53",
+      "name": "TextBox 52",
+      "position": {
+        "x": 780.0,
+        "y": 1856.0,
+        "width": 660.0,
+        "height": 23.455611
+      },
+      "text": "Percentages use the 226 ordered pairs.",
+      "alignment": "left"
+    },
+    "shape_55": {
+      "shape_id": "55",
+      "name": "TextBox 54",
+      "position": {
+        "x": 780.0,
+        "y": 1903.0,
+        "width": 660.0,
+        "height": 27.603444
+      },
+      "text": "Screen coverage and abstentions",
+      "alignment": "left"
+    },
+    "shape_56": {
+      "shape_id": "56",
+      "name": "TextBox 55",
+      "position": {
+        "x": 780.0,
+        "y": 1944.0,
+        "width": 660.0,
+        "height": 74.514722
+      },
+      "text": "Overall: 24/32 ranked, 8/32 abstentions.\nConfirmatory: 22/28 ranked (78.6%), 6/28 abstentions.\nAbstention = no rank assigned, not a decoding failure.",
+      "alignment": "left"
+    },
+    "shape_57": {
+      "shape_id": "57",
+      "name": "Rounded Rectangle 56",
+      "position": {
+        "x": 60.0,
+        "y": 2049.0,
+        "width": 1380.0,
+        "height": 148.0
+      }
+    },
+    "shape_58": {
+      "shape_id": "58",
+      "name": "TextBox 57",
+      "position": {
+        "x": 80.0,
+        "y": 2060.0,
+        "width": 1120.0,
+        "height": 38.0
+      },
+      "text": "C = 0.7544  ·  Ranking agreement with half credit for ties",
+      "alignment": "left"
+    },
+    "shape_59": {
+      "shape_id": "59",
+      "name": "TextBox 58",
+      "position": {
+        "x": 1217.0,
+        "y": 2065.0,
+        "width": 201.0,
+        "height": 30.0
+      },
+      "text": "Positive",
+      "alignment": "right"
+    },
+    "shape_60": {
+      "shape_id": "60",
+      "name": "TextBox 59",
+      "position": {
+        "x": 80.0,
+        "y": 2102.0,
+        "width": 1340.0,
+        "height": 29.0
+      },
+      "text": "C = (148 + 0.5 × 45) / 226. The no-information reference is 0.5.",
+      "alignment": "left"
+    },
+    "shape_61": {
+      "shape_id": "61",
+      "name": "TextBox 60",
+      "position": {
+        "x": 80.0,
+        "y": 2133.0,
+        "width": 1340.0,
+        "height": 28.0
+      },
+      "text": "95% code-resampling stability interval: [0.6262, 0.8382]. Stability to eligible-bank composition.",
+      "alignment": "left"
+    },
+    "shape_62": {
+      "shape_id": "62",
+      "name": "TextBox 61",
+      "position": {
+        "x": 80.0,
+        "y": 2164.0,
+        "width": 1340.0,
+        "height": 28.0
+      },
+      "text": "Positive rule met: ≥20 ordered pairs and lower bound >0.5. Supports coarse instance ranking at this point.",
+      "alignment": "left"
+    },
+    "shape_63": {
+      "shape_id": "63",
+      "name": "TextBox 62",
+      "position": {
+        "x": 60.0,
+        "y": 2210.0,
+        "width": 1380.0,
+        "height": 42.0
+      },
+      "text": "5  Conclusion and future work",
+      "alignment": "left"
+    },
+    "shape_64": {
+      "shape_id": "64",
+      "name": "Rounded Rectangle 63",
+      "position": {
+        "x": 60.0,
+        "y": 2255.0,
+        "width": 1380.0,
+        "height": 107.0
+      }
+    },
+    "shape_65": {
+      "shape_id": "65",
+      "name": "TextBox 64",
+      "position": {
+        "x": 80.0,
+        "y": 2286.0,
+        "width": 430.0,
+        "height": 70.0
+      },
+      "text": "Coarse ranks: 22 instances, C = 0.75.\nPotential use: candidate triage.\nNo absolute LER prediction.",
+      "alignment": "left"
+    },
+    "shape_66": {
+      "shape_id": "66",
+      "name": "TextBox 65",
+      "position": {
+        "x": 550.0,
+        "y": 2286.0,
+        "width": 430.0,
+        "height": 70.0
+      },
+      "text": "One point, BP+OSD-dependent screen.\nCoarse values 2–8 (45 tied pairs).\n6/28 confirmatory instances unranked.",
+      "alignment": "left"
+    },
+    "shape_67": {
+      "shape_id": "67",
+      "name": "TextBox 66",
+      "position": {
+        "x": 1020.0,
+        "y": 2286.0,
+        "width": 400.0,
+        "height": 70.0
+      },
+      "text": "Test new points, decoders and\nindependent instance banks.\nBenchmark triage cost savings.",
+      "alignment": "left"
+    },
+    "shape_68": {
+      "shape_id": "68",
+      "name": "TextBox 67",
+      "position": {
+        "x": 60.0,
+        "y": 2370.0,
+        "width": 900.0,
+        "height": 17.944667
+      },
+      "text": "Corresponding author: hungdn@ptit.edu.vn",
+      "alignment": "left"
+    },
+    "shape_69": {
+      "shape_id": "69",
+      "name": "TextBox 68",
+      "position": {
+        "x": 1000.0,
+        "y": 2370.0,
+        "width": 440.0,
+        "height": 17.944667
+      },
+      "text": "75 × 120 cm · Research poster",
+      "alignment": "right"
+    },
+    "shape_73": {
+      "shape_id": "73",
+      "name": "Before new LER labels",
+      "position": {
+        "x": 60.0,
+        "y": 1035.0,
+        "width": 660.0,
+        "height": 26.0
+      },
+      "text": "Before new LER labels",
+      "alignment": "left"
+    },
+    "shape_74": {
+      "shape_id": "74",
+      "name": "",
+      "position": {
+        "x": 166.0,
+        "y": 1067.0,
+        "width": 448.0,
+        "height": 43.0
+      }
+    },
+    "shape_75": {
+      "shape_id": "75",
+      "name": "Flattened DEM (H_DEM, O)",
+      "position": {
+        "x": 176.0,
+        "y": 1060.0,
+        "width": 428.0,
+        "height": 43.0
+      },
+      "text": "Flattened DEM (HDEM, O)",
+      "alignment": "center"
+    },
+    "shape_76": {
+      "shape_id": "76",
+      "name": "",
+      "position": {
+        "x": 80.0,
+        "y": 1130.0,
+        "width": 270.0,
+        "height": 66.0
+      }
+    },
+    "shape_77": {
+      "shape_id": "77",
+      "name": "",
+      "position": {
+        "x": 430.0,
+        "y": 1130.0,
+        "width": 270.0,
+        "height": 66.0
+      }
+    },
+    "shape_78": {
+      "shape_id": "78",
+      "name": "Pivoting certificate",
+      "position": {
+        "x": 90.0,
+        "y": 1133.0,
+        "width": 250.0,
+        "height": 23.0
+      },
+      "text": "Pivoting certificate",
+      "alignment": "center"
+    },
+    "shape_79": {
+      "shape_id": "79",
+      "name": "U_cert",
+      "position": {
+        "x": 100.0,
+        "y": 1145.0,
+        "width": 230.0,
+        "height": 39.0
+      },
+      "text": "Ucert",
+      "alignment": "center"
+    },
+    "shape_80": {
+      "shape_id": "80",
+      "name": "Randomized BP+OSD",
+      "position": {
+        "x": 440.0,
+        "y": 1133.0,
+        "width": 250.0,
+        "height": 23.0
+      },
+      "text": "Randomized BP+OSD",
+      "alignment": "center"
+    },
+    "shape_81": {
+      "shape_id": "81",
+      "name": "d̂_upper",
+      "position": {
+        "x": 440.0,
+        "y": 1145.0,
+        "width": 250.0,
+        "height": 39.0
+      },
+      "text": "d̂upper",
+      "alignment": "center"
+    },
+    "shape_84": {
+      "shape_id": "84",
+      "name": "",
+      "position": {
+        "x": 80.0,
+        "y": 1273.0,
+        "width": 620.0,
+        "height": 51.0
+      }
+    },
+    "shape_85": {
+      "shape_id": "85",
+      "name": "Fresh BP+OSD sampling → rank test",
+      "position": {
+        "x": 90.0,
+        "y": 1282.0,
+        "width": 600.0,
+        "height": 30.0
+      },
+      "text": "Fresh BP+OSD sampling → rank test",
+      "alignment": "center"
+    },
+    "shape_86": {
+      "shape_id": "86",
+      "name": "",
+      "position": {
+        "x": 215.0,
+        "y": 1273.0,
+        "width": 1.0,
+        "height": 1.0
+      }
+    },
+    "shape_87": {
+      "shape_id": "87",
+      "name": "",
+      "position": {
+        "x": 565.0,
+        "y": 1273.0,
+        "width": 1.0,
+        "height": 1.0
+      }
+    },
+    "shape_90": {
+      "shape_id": "90",
+      "name": "",
+      "position": {
+        "x": 60.0,
+        "y": 1226.0,
+        "width": 660.0,
+        "height": 0.0
+      }
+    },
+    "shape_91": {
+      "shape_id": "91",
+      "name": "FREEZE BOUNDARY",
+      "position": {
+        "x": 266.0,
+        "y": 1201.0,
+        "width": 248.0,
+        "height": 24.0
+      },
+      "text": "FREEZE BOUNDARY",
+      "alignment": "center"
+    },
+    "shape_92": {
+      "shape_id": "92",
+      "name": "After new LER labels",
+      "position": {
+        "x": 266.0,
+        "y": 1238.0,
+        "width": 248.0,
+        "height": 25.0
+      },
+      "text": "After new LER labels",
+      "alignment": "center"
+    },
+    "shape_93": {
+      "shape_id": "93",
+      "name": "Fig. 1. Structural results freeze before",
+      "position": {
+        "x": 60.0,
+        "y": 1339.0,
+        "width": 660.0,
+        "height": 44.0
+      },
+      "text": "Fig. 1. Structural results freeze before fresh labels.\nTwo search phases must agree, otherwise abstain.",
+      "alignment": "left"
+    },
+    "shape_94": {
+      "shape_id": "94",
+      "name": "Lower LER is better",
+      "position": {
+        "x": 60.0,
+        "y": 1540.0,
+        "width": 280.0,
+        "height": 27.0
+      },
+      "text": "Lower LER is better",
+      "alignment": "left"
+    },
+    "shape_95": {
+      "shape_id": "95",
+      "name": "",
+      "position": {
+        "x": 348.0,
+        "y": 1658.0,
+        "width": 1.0,
+        "height": 1.0
+      }
+    },
+    "shape_96": {
+      "shape_id": "96",
+      "name": "",
+      "position": {
+        "x": 205.0,
+        "y": 1725.0,
+        "width": 1.0,
+        "height": 1.0
+      }
+    },
+    "shape_171": {
+      "shape_id": "171",
+      "name": "",
+      "position": {
+        "x": 206.0,
+        "y": 1658.5,
+        "width": 142.0,
+        "height": 67.0
+      }
+    },
+    "shape_98": {
+      "shape_id": "98",
+      "name": "",
+      "position": {
+        "x": 60.0,
+        "y": 1630.0,
+        "width": 42.0,
+        "height": 270.0
+      }
+    },
+    "shape_99": {
+      "shape_id": "99",
+      "name": "Circuit-level LER",
+      "position": {
+        "x": 65.0,
+        "y": 1640.0,
+        "width": 33.0,
+        "height": 255.0
+      },
+      "text": "Circuit-level LER",
+      "alignment": "left"
+    },
+    "shape_100": {
+      "shape_id": "100",
+      "name": "",
+      "position": {
+        "x": 285.0,
+        "y": 1925.0,
+        "width": 210.0,
+        "height": 57.0
+      }
+    },
+    "shape_101": {
+      "shape_id": "101",
+      "name": "d̂_upper",
+      "position": {
+        "x": 285.0,
+        "y": 1934.0,
+        "width": 210.0,
+        "height": 42.0
+      },
+      "text": "d̂upper",
+      "alignment": "center"
+    },
+    "shape_172": {
+      "shape_id": "172",
+      "name": "Conclusion label Conclusion",
+      "position": {
+        "x": 80.0,
+        "y": 2262.0,
+        "width": 430.0,
+        "height": 25.0
+      },
+      "text": "Conclusion",
+      "alignment": "left"
+    },
+    "shape_173": {
+      "shape_id": "173",
+      "name": "Conclusion label Scope",
+      "position": {
+        "x": 550.0,
+        "y": 2262.0,
+        "width": 430.0,
+        "height": 25.0
+      },
+      "text": "Scope",
+      "alignment": "left"
+    },
+    "shape_174": {
+      "shape_id": "174",
+      "name": "Conclusion label Future work",
+      "position": {
+        "x": 1020.0,
+        "y": 2262.0,
+        "width": 400.0,
+        "height": 25.0
+      },
+      "text": "Future work",
+      "alignment": "left"
+    },
+    "shape_175": {
+      "shape_id": "175",
+      "name": "",
+      "position": {
+        "x": 60.0,
+        "y": 19.0,
+        "width": 150.0,
+        "height": 63.7795
+      }
+    }
+  }
+}
